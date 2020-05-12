@@ -26,6 +26,7 @@ public class Arquivos {
 	private ArrayList<String> arqsRb = new ArrayList<String>();
 	private ArrayList<String> arqsPy = new ArrayList<String>();
 	private ArrayList<String> arqsScala = new ArrayList<String>();
+	private ArrayList<String> arqsKotlin = new ArrayList<String>();
 	private ArrayList<String> dirsSRC = new ArrayList<String>();
 	private ArrayList<String> dirsTeste = new ArrayList<String>();
 	
@@ -162,6 +163,14 @@ public class Arquivos {
 	public void setArqsScala(ArrayList<String> arqsScala) {
 		this.arqsScala = arqsScala;
 	}
+	
+	public ArrayList<String> getArqsKotlin() {
+		return arqsKotlin;
+	}
+	
+	public void setArqsKotlin(ArrayList<String> arqsKotlin) {
+		this.arqsKotlin = arqsKotlin;
+	}	
 
 	/* MAPEAR ARQUIVOS POR PROJETO
 	 * ------------------------------------------*/
@@ -217,6 +226,7 @@ public class Arquivos {
 		arquivos.setArqsRb(arqsRb);
 		arquivos.setArqsPy(arqsPy);
 		arquivos.setArqsScala(arqsScala);
+		arquivos.setArqsKotlin(arqsKotlin);
 		arquivos.setDirsTeste(dirsTeste);
 		arquivos.setDirsSRC(dirsSRC);
 		arquivos.setDiretorio(dirs);
@@ -278,6 +288,9 @@ public class Arquivos {
 				{
 					arqsScala.add(fileRepositorio + "/" + listaArquivos[i].getName());
 				}
+				else if (listaArquivos[i].getName().toLowerCase().endsWith(".kt")) {
+					arqsKotlin.add(fileRepositorio + "/" + listaArquivos[i].getName());
+				}				
 				else 
 				{
 					// OUTROS ARQUIVOS (EX.: PNG, JAR, TXT)
