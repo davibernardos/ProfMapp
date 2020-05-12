@@ -2,7 +2,7 @@
 
 This tool aims to identify and quantify characteristics of mobile apps from a software testing perspective. 
 
-Publication:
+If you use this tool, we gently ask you to cite our publication:
 ```
 @article{SilvaEDE2018,
 title = "Characterizing mobile apps from a source and test code viewpoint",
@@ -21,7 +21,7 @@ author = "Davi Bernardo Silva and Marcelo Medeiros Eler and Vinicius H.S. Durell
 
 - Folder /ExperimentalData contains the raw data extracted from the MA663 sample. The list of 663 apps and their repository links can also be found in this folder.
 
-- Folder /Tool contains the source code and binaries for the ProfMapp tool.
+- Folder /Tool contains the source code and binaries for the ProfMapp tool. Open it using the Eclipse IDE.
 
 Tool execution
 - Download file profmapp.jar from the /Tool folder.
