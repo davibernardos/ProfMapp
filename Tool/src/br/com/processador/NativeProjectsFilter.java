@@ -22,13 +22,17 @@ public class NativeProjectsFilter {
 	public static boolean isNative(Projeto project) {
 		var dirs = (new Diretorios()).mapearDirs(project);
 		var files = (new Arquivos()).mapearArqs(dirs);
-		int numberOfOtherSourceFiles = files.getArqsJS().size() + files.getArqsHTML().size() + files.getArqsCSS().size()
-				+ files.getArqsH().size() + files.getArqsC().size() + files.getArqsCPP().size()
-				+ files.getArqsRb().size() + files.getArqsPy().size() + files.getArqsScala().size();
+		int numberOfOtherSourceFiles = files.getArqsJS().size() 
+				+ files.getArqsHTML().size() + files.getArqsCSS().size() 
+				+ files.getArqsH().size() + files.getArqsC().size() 
+				+ files.getArqsCPP().size() + files.getArqsRb().size() 
+				+ files.getArqsPy().size() + files.getArqsScala().size();
 
 		// remove projects with Kotlin files (mixed with Java files)
-		return files.getArqsLayout().size() >= 1 && files.getArqsJavaSRC().size() >= 1
-				&& files.getArqsJavaSRC().size() > numberOfOtherSourceFiles && files.getArqsKotlin().size() == 0;
+		return files.getArqsLayout().size() >= 1 
+				&& files.getArqsJavaSRC().size() >= 1
+				&& files.getArqsJavaSRC().size() > numberOfOtherSourceFiles 
+				&& files.getArqsKotlin().size() == 0;
 	}
 
 	/**
