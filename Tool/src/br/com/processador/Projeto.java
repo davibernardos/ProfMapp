@@ -3,31 +3,30 @@ package br.com.processador;
 import java.io.File;
 import java.util.ArrayList;
 
-public class Projeto 
-{
-
-	
+public class Projeto {
 	private String nome;
 	private String caminho;
 
 	public String getNome() {
 		return nome;
 	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
 	public String getCaminho() {
 		return caminho;
 	}
+
 	public void setCaminho(String caminho) {
 		this.caminho = caminho;
 	}
 
-	
-	public ArrayList<Projeto> listarProjetos(String repositorio){
+	public ArrayList<Projeto> listarProjetos(String repositorio) {
 		File fileRepositorio = new File(repositorio);
 		File[] listaArquivos = fileRepositorio.listFiles();
-		
+
 		Projeto projeto = new Projeto();
 		ArrayList<Projeto> listaDeProjetos = new ArrayList<Projeto>();
 
